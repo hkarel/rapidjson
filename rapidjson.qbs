@@ -18,8 +18,8 @@ Product {
     }
     Properties {
         condition: qbs.architecture.startsWith("x86")
-        cpp.defines: ["RAPIDJSON_SSE2"]
-        cpufeatures.x86_sse2: true
+        cpp.defines: ["RAPIDJSON_SSE42"]
+        cpufeatures.x86_sse4_2: true
     }
 
     cpp.cxxFlags: [
