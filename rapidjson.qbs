@@ -42,6 +42,6 @@ Product {
         Depends { name: "cpp" }
         Depends { name: "cpufeatures" }
         cpp.includePaths: ["include"]
-        cpp.defines: ["JSON_SERIALIZATION", "RAPID_JSON"]
+        cpp.defines: ["RAPID_JSON"]
     }
 }
