@@ -1,5 +1,4 @@
 import qbs
-import GccUtl
 
 Product {
     name: "RapidJson"
@@ -8,8 +7,6 @@ Product {
     type: "staticlibrary"
     Depends { name: "cpp" }
     Depends { name: "cpufeatures" }
-
-    cpp.archiverName: GccUtl.ar(cpp.toolchainPathPrefix)
 
     Properties {
         condition: qbs.architecture.startsWith("arm")
