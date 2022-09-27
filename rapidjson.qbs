@@ -5,6 +5,7 @@ Product {
     targetName: "rapidjson"
 
     type: "staticlibrary"
+
     Depends { name: "cpp" }
     Depends { name: "cpufeatures" }
 
@@ -20,7 +21,6 @@ Product {
     }
 
     cpp.cxxFlags: [
-        "-std=c++14",
         //"-msse4",
         "-ggdb3",
         "-Wall",
@@ -28,6 +28,7 @@ Product {
         "-Wno-unused-parameter",
     ]
     cpp.includePaths: ["include"]
+    cpp.cxxLanguageVersion: "c++17"
 
     files: [
         "include/rapidjson/error/*.h",
