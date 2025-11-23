@@ -1,4 +1,5 @@
 import qbs
+import qbs.FileInfo
 
 Product {
     name: "RapidJson"
@@ -36,10 +37,13 @@ Product {
         "include/rapidjson/msinttypes/*.h",
         "include/rapidjson/*.h",
     ]
+
     Export {
         Depends { name: "cpp" }
         Depends { name: "cpufeatures" }
-        cpp.includePaths: ["include"]
+        cpp.includePaths: [
+            FileInfo.joinPaths(exportingProduct.sourceDirectory, "include")
+        ]
         cpp.defines: ["RAPID_JSON"]
     }
 }
