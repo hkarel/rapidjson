@@ -40,6 +40,7 @@ RAPIDJSON_DIAG_OFF(4244) // conversion from kXxxFlags to 'uint16_t', possible lo
 
 #ifdef __GNUC__
 RAPIDJSON_DIAG_OFF(effc++)
+RAPIDJSON_DIAG_OFF(switch-enum)
 #endif // __GNUC__
 
 #ifdef GetObject
